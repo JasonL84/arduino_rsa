@@ -31,7 +31,7 @@ void byteprod(byte* dest, byte* a, byte* b, int size_a, int size_b){
 	//ensure when using byteprod the destination buffer is at least twice the size of the input buffers
 	for(int i = 0; i< size_a; i++){
 		for(int j = 0; j < size_b; j++){
-			*((short*)(dest+i)) += a[i]*b[j];
+			*((short*)(dest+i+j)) += a[i]*b[j];
 		}
 	}
 }
